@@ -1,8 +1,8 @@
-#How to use#
+# How to use
 - Make sure you have healpy, pysm, and pymaster installed
 - Run the notebooks!
 
-# 01_ILC in pixel space
+## 01_ILC in pixel space
 Internal Linear Combination of simulated CMB maps and foregrounds in pixel space
 Linear combination of component maps:
 
@@ -38,7 +38,7 @@ $$
 \Bigl \langle s^2_{ILC} \Bigr \rangle = \Bigl \langle s^2_{CMB} \Bigr \rangle +  \sum_{i,i^{\prime}} w_i (\langle f_i f_i ^{\prime}\rangle + \langle n_i n_i ^{\prime} \rangle ) w_i^{\prime}
 $$
 
-## ILC method
+### ILC method
 
 - Compute the covariance $C_{i i^{\prime}} = \langle d_i (p)d_{i^{\prime}}(p)\rangle$
 - Compute the inverse of the covariance
@@ -60,7 +60,7 @@ $$
 \hat{S}_{ILC}(p) = \sum_i w_i . d_i(p)
 $$
 
-# 02_ILC in harmonic space
+## 02_ILC in harmonic space
 Internal Linear Combination of simulated CMB maps and foregrounds in harmonic space
 Performing ILC in harmonic space (as opposed to pixel space) allows for better control over spatial scales using spherical harmonic decomposition.
 
@@ -103,7 +103,7 @@ a^{ILC}_{lm} = \sum_i w_i(l)a^i_{lm}
 - Reconstruct the map
 - Compute the power spectrum
 - 
-# 03_HILC after applying a mask
+## 03_HILC after applying a mask
 Masking the galactic plane can help reduce the main foregrounds and make extracting the CMB signal a lot easier. A cosine smoothed mask can be used to avoid any sharp edges. 
 The coupled cross power spectrum of the masked maps aka the "pseudo power spectra" is given as 
 ```math
