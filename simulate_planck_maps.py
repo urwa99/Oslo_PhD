@@ -4,7 +4,7 @@ import pysm3
 import pysm3.units as u
 
 #simulating foregroud emission and noise at the different Planck frequencies
-def simulate_planck_maps(nsides):
+def simulate_planck_maps(nsides,freq):
     """
     Simulate foreground emission and noise at different Planck frequencies.
     
@@ -14,7 +14,8 @@ def simulate_planck_maps(nsides):
     Returns:
     tuple: Numpy arrays of simulated maps for noise, dust, synchrotron, free-free, and CMB components.
     """
-    freqs = np.array([28.4,  44.1,  70.4,  100.0,  143.0,  217.0,  353.0]) #,  545.0,  857.0
+    # freq = np.array([28.4,  44.1,  70.4,  100.0,  143.0,  217.0,  353.0,  545.0,  857.0])
+
     
     sens = np.array([150.,  162.,  210.,  77.4,  33.,  46.8, 154,  42.,  5016.])
     
@@ -27,7 +28,7 @@ def simulate_planck_maps(nsides):
        # Initialize storage for maps
     noise_pl, dust_pl, sync_pl, ff_pl, cmb_pl = [], [], [], [], []
     
-    for nf, freq in enumerate(freqs):
+    for nf, freq in enumerate(freq):
         # Generate noise
         noise = np.random.normal(size=(12 * nsides**2)) * sens[nf] / hp.nside2resol(nsides, True)
         noise_pl.append(noise)
