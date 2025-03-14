@@ -1,3 +1,7 @@
+#How to use#
+- Make sure you have healpy, pysm, and pymaster installed
+- Run the notebooks!
+
 # 01_ILC in pixel space
 Internal Linear Combination of simulated CMB maps and foregrounds in pixel space
 Linear combination of component maps:
