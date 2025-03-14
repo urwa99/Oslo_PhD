@@ -98,20 +98,16 @@ a^{ILC}_{lm} = \sum_i w_i(l)a^i_{lm}
 
 - Reconstruct the map
 - Compute the power spectrum
+- 
 # HILC after applying a mask
 Masking the galactic plane can help reduce the main foregrounds and make extracting the CMB signal a lot easier. A cosine smoothed mask can be used to avoid any sharp edges. 
-The coupled cross power spectrum of the masked maps aka the "pseudo power spectra" is given as
+The coupled cross power spectrum of the masked maps aka the "pseudo power spectra" is given as 
 ```math
-\(\tilde{C}_{\ell}^{ij}\)
+\tilde{C}_{\ell}^{ij} =\frac{1}{2 \ell + 1} \sum_{m=-\ell}^{\ell} \left| \tilde{a}_{\ell m} \right|^2
 ```
-The mode coupling matrix:
-```math
-\(M_{\ell \ell'}\)
-```
-To get the decoupled power spectra $\hat{C}_{\ell}^{ij}$ , we needed to invert the mode coupling matrix and convolve it with the pseudo $C_\ell$:
+The mode coupling matrix $M_{\ell \ell'}$
+
+To get the decoupled power spectra $\hat{C}_{\ell}^{ij}$ we needed to invert the mode coupling matrix and convolve it with the pseudo $C_{\ell}$:
 ```math
     \hat{C}_l^{ij} = M_{ll'}^{-1} \tilde{C}_l^{ij}
 ```
-
-
-where $\tilde{C}_l^{ij}$ is the pseudo power spectrum aka the masked power spectrum.
