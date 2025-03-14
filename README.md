@@ -1,4 +1,4 @@
-# ILC in pixel space
+# 01_ILC in pixel space
 Internal Linear Combination of simulated CMB maps and foregrounds in pixel space
 Linear combination of component maps:
 
@@ -56,7 +56,7 @@ $$
 \hat{S}_{ILC}(p) = \sum_i w_i . d_i(p)
 $$
 
-# ILC in harmonic space
+# 02_ILC in harmonic space
 Internal Linear Combination of simulated CMB maps and foregrounds in harmonic space
 Performing ILC in harmonic space (as opposed to pixel space) allows for better control over spatial scales using spherical harmonic decomposition.
 
@@ -99,7 +99,7 @@ a^{ILC}_{lm} = \sum_i w_i(l)a^i_{lm}
 - Reconstruct the map
 - Compute the power spectrum
 - 
-# HILC after applying a mask
+# 03_HILC after applying a mask
 Masking the galactic plane can help reduce the main foregrounds and make extracting the CMB signal a lot easier. A cosine smoothed mask can be used to avoid any sharp edges. 
 The coupled cross power spectrum of the masked maps aka the "pseudo power spectra" is given as 
 ```math
